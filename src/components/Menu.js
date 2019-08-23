@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import CollapsedMenu from "./CollapsedMenu"
+import Backdrop from "./Backdrop"
 
 import styled from "styled-components"
 import media from "styled-media-query"
@@ -10,13 +11,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const Bars = styled.i`
+  display: none;
+
+  ${media.lessThan("small")`
+  display: inline-block;
+
   color: #fff;
   font-size: 1.2rem;
+  `}
 `
 
 const MenuBox = styled.div`
-  position: fixed;
+  /* position: fixed;
   top: 0;
+  left: 0; */
   width: 13vw;
   height: 100vh;
   background-color: green;
@@ -56,17 +64,28 @@ const Menu = () => {
     }
   `)
 
+  const [open, setOpen] = useState(false)
+
+  const collapsedMenuClickHandler = () => setOpen(open => !open)
+
+  let backdrop
+
+  if (open) {
+    backdrop = <Backdrop close={collapsedMenuClickHandler} />
+  }
+
   return (
     <MenuBox>
       <HeaderBox>
-        <Bars>
+        <Bars onClick={collapsedMenuClickHandler}>
           <FontAwesomeIcon icon={faBars} />
         </Bars>
         <Link to="/">
           <H1>{data.site.siteMetadata.title}</H1>{" "}
         </Link>
       </HeaderBox>
-      <CollapsedMenu />
+      <CollapsedMenu show={open} close={collapsedMenuClickHandler} />
+      {backdrop}
     </MenuBox>
   )
 }

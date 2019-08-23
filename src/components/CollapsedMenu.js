@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -11,15 +11,23 @@ import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
 const Menu = styled.div`
   box-sizing: border-box;
   height: 100vh;
-  width: 90vw;
+  width: 80vw;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #000;
   padding: 0 10% 0 5%;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+  ${props =>
+    props.show &&
+    css`
+      transform: translateX(0);
+    `};
 `
 
-const IconBox = styled.div`
+const SocialBox = styled.div`
   display: inline-block;
   color: #555555;
   margin-top: 13%;
@@ -61,37 +69,34 @@ const X = styled.div`
   display: flex;
   align-items: center;
   padding-left: 0.5rem;
-
-  ${media.lessThan("small")`
-    height: 8vh;s
-  `}
+  height: 8vh;
 `
 
-const CollapsedMenu = () => {
+const CollapsedMenu = ({ close, show }) => {
   return (
-    <Menu>
-      <X>
+    <Menu show={show}>
+      <X onClick={close}>
         <FontAwesomeIcon icon={faTimes} />
       </X>
       <ul>
         <Li>
-          <Link>Work</Link>
+          <Link to="/">Work</Link>
         </Li>
         <Li>
-          <Link>About</Link>
+          <Link to="/">About</Link>
         </Li>
         <Li>
-          <Link>Contact</Link>
+          <Link to="/">Contact</Link>
         </Li>
       </ul>
-      <IconBox>
+      <SocialBox>
         <Icon>
           <FontAwesomeIcon icon={faInstagram} />
         </Icon>
         <Icon>
           <FontAwesomeIcon icon={faFacebookF} />
         </Icon>
-      </IconBox>
+      </SocialBox>
     </Menu>
   )
 }

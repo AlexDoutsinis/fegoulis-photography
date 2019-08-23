@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Collections from "../components/Collections"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <div>Hello world!</div>
+      <Collections />
     </Layout>
   )
 }
