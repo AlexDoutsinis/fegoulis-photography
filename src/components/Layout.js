@@ -7,6 +7,10 @@ import Menu from "./Menu"
 import media from "styled-media-query"
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     @import url('https://fonts.googleapis.com/css?family=Cardo:700|Pathway+Gothic+One&display=swap');
 
@@ -28,8 +32,8 @@ const Content = styled.div`
 
   ${media.lessThan("small")`
     width: 100vw;
+    height: auto;
     margin: 0;
-    height: 92vh;
     padding-top: 8vh;
   `}
 `

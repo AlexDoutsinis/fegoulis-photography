@@ -11,46 +11,51 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 const Bars = styled.i`
-  display: none;
+  /* display: none; */
 
   ${media.lessThan("small")`
-  display: inline-block;
+  /* display: inline-block; */
+
+  /* border: solid red 2px; */
 
   color: #fff;
   font-size: 1.2rem;
   `}
 `
 
-const MenuBox = styled.div`
-  /* position: fixed;
-  top: 0;
-  left: 0; */
-  width: 13vw;
-  height: 100vh;
-  background-color: green;
+const NavBar = styled.div`
+  height: 100%;
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  ${media.lessThan("small")`
-    /* screen width is less than 768px (medium) */
-    background-color: #000;
-    height: 8vh;
-    width: 100vw;
-  `}
+  /* justify-content: center; */
 `
 
 const HeaderBox = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: center;
+  height: 8vh;
+  width: 100vw;
+  background-color: #000;
+
   padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* border: solid red 2px; */
 `
 
 const H1 = styled.h1`
+  display: inline-block;
+  width: 100vw;
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.7px;
   padding-left: 4%;
-  width: 100%;
+
+  /* border: solid green 2px; */
 `
 
 const Menu = () => {
@@ -75,18 +80,20 @@ const Menu = () => {
   }
 
   return (
-    <MenuBox>
+    <>
       <HeaderBox>
-        <Bars onClick={collapsedMenuClickHandler}>
-          <FontAwesomeIcon icon={faBars} />
-        </Bars>
-        <Link to="/">
-          <H1>{data.site.siteMetadata.title}</H1>{" "}
-        </Link>
+        <NavBar>
+          <Bars onClick={collapsedMenuClickHandler}>
+            <FontAwesomeIcon icon={faBars} />
+          </Bars>
+          <Link to="/">
+            <H1>{data.site.siteMetadata.title}</H1>{" "}
+          </Link>
+        </NavBar>
       </HeaderBox>
       <CollapsedMenu show={open} close={collapsedMenuClickHandler} />
       {backdrop}
-    </MenuBox>
+    </>
   )
 }
 

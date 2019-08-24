@@ -5,8 +5,12 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const ImageWrapper = styled.div`
-  height: 50%;
+  /* height: 20%;
   width: auto;
+  margin-bottom: 10px; */
+
+  /* border: solid red 4px; */
+  /* margin-bottom: 10px; */
 `
 
 const Collection = ({ node }) => (

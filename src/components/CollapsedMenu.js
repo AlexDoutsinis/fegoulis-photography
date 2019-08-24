@@ -16,7 +16,8 @@ const Menu = styled.div`
   top: 0;
   left: 0;
   background-color: #000;
-  padding: 0 10% 0 5%;
+  /* padding: 0 0 0 5%; */
+  padding-left: 5%;
   z-index: 2;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
@@ -32,6 +33,7 @@ const SocialBox = styled.div`
   color: #555555;
   margin-top: 13%;
   font-size: 1.1rem;
+  padding-left: 1%;
 `
 
 const Icon = styled.div`
