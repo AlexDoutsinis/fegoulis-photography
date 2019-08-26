@@ -11,7 +11,6 @@ const RenderCollections = () => {
           node {
             title
             slug
-            id
             gallery {
               fluid {
                 base64

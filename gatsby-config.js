@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Fegoulis Photography",
+    title: "Fegoulis",
     author: "Alexdut",
   },
   plugins: [
@@ -11,6 +11,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],
