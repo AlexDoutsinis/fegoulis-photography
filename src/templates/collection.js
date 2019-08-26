@@ -22,10 +22,11 @@ const StyledImg = styled(Img)`
   }
 `
 
-const StyledTitleBox = styled.div`
+const StyledInfoBox = styled.div`
   height: 20vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `
@@ -33,6 +34,13 @@ const StyledTitleBox = styled.div`
 const StyledTitle = styled.h2`
   font-size: 1.4rem;
   color: #fff;
+`
+
+const StyledParagraph = styled.p`
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 1.2rem;
+  color: #999;
 `
 
 export const query = graphql`
@@ -55,9 +63,10 @@ export const query = graphql`
 
 const Collection = ({ data: { contentfulCollections } }) => (
   <Layout>
-    <StyledTitleBox>
+    <StyledInfoBox>
       <StyledTitle>{contentfulCollections.title}</StyledTitle>
-    </StyledTitleBox>
+      <StyledParagraph>{contentfulCollections.description}</StyledParagraph>
+    </StyledInfoBox>
 
     <StyledGallery>
       {contentfulCollections.gallery.map(image => (
