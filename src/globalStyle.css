@@ -136,5 +136,7 @@ body {
   line-height: 16px;
   font-family: "Cardo", serif;
   font-weight: 700;
+  background-color: #000;
   color: #fff;
+  letter-spacing: 0.12rem;
 }

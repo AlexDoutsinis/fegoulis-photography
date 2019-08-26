@@ -10,7 +10,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           edges {
             node {
               slug
-              id
             }
           }
         }
@@ -31,7 +30,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: collectionTemplate,
       context: {
         slug: node.slug,
-        id: node.id,
       },
     })
   })
