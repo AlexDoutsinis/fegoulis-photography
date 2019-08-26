@@ -1,19 +1,13 @@
 import React from "react"
-import styled from "styled-components"
 
 import RenderCollections from "./RenderCollections"
-
-const Grid = styled.div`
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-`
+import { StyledGrid } from "../../styledElements/Collections"
 
 const Collections = () => {
   return (
-    <Grid>
+    <StyledGrid>
       <RenderCollections />
-    </Grid>
+    </StyledGrid>
   )
 }
 

@@ -9,7 +9,7 @@ import {
   StyledNavBar,
   StyledBars,
   StyledH1,
-} from "../elements/Header"
+} from "../styledElements/Header"
 
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 

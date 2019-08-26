@@ -2,7 +2,7 @@ import React from "react"
 
 import Header from "./Header"
 
-import { StyledContent } from "../elements/LayoutContent"
+import { StyledContent } from "../styledElements/LayoutContent"
 
 const Layout = props => {
   return (

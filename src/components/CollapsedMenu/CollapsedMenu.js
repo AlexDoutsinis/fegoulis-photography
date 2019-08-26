@@ -10,7 +10,7 @@ import {
   StyledLi,
   StyledSocialBox,
   StyledSocialIcon,
-} from "../../elements/CollapsedMenu"
+} from "../../styledElements/CollapsedMenu"
 
 const CollapsedMenu = ({ show, close }) => {
   return (
