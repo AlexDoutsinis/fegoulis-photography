@@ -9,7 +9,7 @@ export const StyledGrid = styled.div`
   z-index: 1;
 `
 
-// Collection template gallery styles
+// Collection template gallery
 export const StyledInfoBox = styled.div`
   height: 20vh;
   width: 100vw;
@@ -39,12 +39,18 @@ export const StyledGallery = styled.div`
   flex-direction: column;
 `
 
-export const StyledImg = styled(Img)`
-  max-width: 100%;
-  height: auto;
+// Collection gallery grid
+export const StyledImgWrapper = styled.div`
   margin: 0 1.2rem;
-  border-radius: 8px;
   &:not(:first-child) {
     margin-top: 2rem;
   }
+
+  cursor: zoom-in;
+`
+
+export const StyledImg = styled(Img)`
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 `

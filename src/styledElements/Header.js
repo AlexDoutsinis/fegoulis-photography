@@ -2,6 +2,8 @@ import styled from "styled-components"
 import media from "styled-media-query"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import { Link } from "gatsby"
+
 export const StyledHeader = styled.header`
   height: 8vh;
   width: 100vw;
@@ -31,10 +33,13 @@ export const StyledBars = styled(FontAwesomeIcon)`
   `}
 `
 
+export const StyledH1LinkWrapper = styled(Link)`
+  margin-left: 0.9rem;
+`
+
 export const StyledH1 = styled.h1`
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.7px;
-  margin-left: 0.8rem;
 `

@@ -22,12 +22,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const collectionTemplate = path.resolve(`./src/templates/collection.js`)
+  const collectionGalleryTemplate = path.resolve(
+    `./src/templates/collectionGallery.js`
+  )
 
   res.data.allContentfulCollections.edges.forEach(({ node }) => {
     createPage({
       path: `/collection/${node.slug}`,
-      component: collectionTemplate,
+      component: collectionGalleryTemplate,
       context: {
         slug: node.slug,
       },
