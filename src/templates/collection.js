@@ -18,11 +18,7 @@ export const query = graphql`
       description
       gallery {
         fluid {
-          base64
-          aspectRatio
-          src
-          srcSet
-          sizes
+          ...GatsbyContentfulFluid
         }
       }
     }
@@ -37,8 +33,8 @@ const Collection = ({ data: { contentfulCollections } }) => (
     </StyledInfoBox>
 
     <StyledGallery>
-      {contentfulCollections.gallery.map(image => (
-        <StyledImg fluid={image.fluid} />
+      {contentfulCollections.gallery.map((image, index) => (
+        <StyledImg fluid={image.fluid} key={index} />
       ))}
     </StyledGallery>
   </Layout>

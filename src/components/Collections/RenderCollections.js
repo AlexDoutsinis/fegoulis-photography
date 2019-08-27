@@ -13,11 +13,7 @@ const RenderCollections = () => {
             slug
             gallery {
               fluid {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
+                ...GatsbyContentfulFluid
               }
             }
           }

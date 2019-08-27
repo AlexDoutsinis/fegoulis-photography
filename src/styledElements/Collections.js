@@ -27,8 +27,11 @@ export const StyledTitle = styled.h2`
 export const StyledParagraph = styled.p`
   font-size: 0.9rem;
   color: #fff;
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
   color: #999;
+  font-family: "Pathway Gothic One", sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
 `
 
 export const StyledGallery = styled.div`
