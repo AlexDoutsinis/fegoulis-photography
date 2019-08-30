@@ -1,8 +1,8 @@
 import React from "react"
 import Collection from "./Collection"
 
-const CollectionsList = ({ data: { allContentfulCollections } }) =>
-  allContentfulCollections.edges.map(({ node }) => (
+const CollectionsList = ({ data: { allContentfulCollection } }) =>
+  allContentfulCollection.edges.map(({ node }) => (
     <Collection node={node} key={node.slug} />
   ))
 

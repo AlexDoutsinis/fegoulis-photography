@@ -13,28 +13,28 @@ import {
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulCollections(slug: { eq: $slug }) {
+    contentfulCollection(slug: { eq: $slug }) {
       title
       description
       gallery {
-        fluid {
-          ...GatsbyContentfulFluid
+        fluid(maxWidth: 1300, quality: 50) {
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }
   }
 `
 
-const CollectionGallery = ({ data: { contentfulCollections } }) => {
+const CollectionGallery = ({ data: { contentfulCollection } }) => {
   return (
     <Layout>
       <StyledInfoBox>
-        <StyledTitle>{contentfulCollections.title}</StyledTitle>
-        <StyledParagraph>{contentfulCollections.description}</StyledParagraph>
+        <StyledTitle>{contentfulCollection.title}</StyledTitle>
+        <StyledParagraph>{contentfulCollection.description}</StyledParagraph>
       </StyledInfoBox>
 
       <StyledGallery>
-        <GalleryGrid data={contentfulCollections} />
+        <GalleryGrid data={contentfulCollection} />
       </StyledGallery>
     </Layout>
   )

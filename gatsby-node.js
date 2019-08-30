@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const res = await graphql(
     `
       query {
-        allContentfulCollections {
+        allContentfulCollection {
           edges {
             node {
               slug
@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `./src/templates/collectionGallery.js`
   )
 
-  res.data.allContentfulCollections.edges.forEach(({ node }) => {
+  res.data.allContentfulCollection.edges.forEach(({ node }) => {
     createPage({
       path: `/collection/${node.slug}`,
       component: collectionGalleryTemplate,

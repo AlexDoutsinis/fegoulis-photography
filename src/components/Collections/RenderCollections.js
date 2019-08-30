@@ -6,14 +6,14 @@ import CollectionList from "./CollectionsList"
 const RenderCollections = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulCollections {
+      allContentfulCollection {
         edges {
           node {
             title
             slug
-            gallery {
-              fluid {
-                ...GatsbyContentfulFluid
+            thumbnail {
+              fluid(maxWidth: 800, quality: 20) {
+                ...GatsbyContentfulFluid_withWebp
               }
             }
           }

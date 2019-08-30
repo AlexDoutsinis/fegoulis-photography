@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-// import media from "styled-media-query"
+import media from "styled-media-query"
 
 // Collections grid
 export const StyledGrid = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
+  width: 50%;
 `
 
 // Collection template gallery
@@ -37,11 +38,16 @@ export const StyledParagraph = styled.p`
 export const StyledGallery = styled.div`
   display: flex;
   flex-direction: column;
+  width: 50%;
+
+  ${media.lessThan("small")`
+      width: 100%;
+  `}
 `
 
 // Collection gallery grid
 export const StyledImgWrapper = styled.div`
-  margin: 0 1.2rem;
+  margin: 0 1.5rem;
   &:not(:first-child) {
     margin-top: 2rem;
   }
@@ -50,7 +56,5 @@ export const StyledImgWrapper = styled.div`
 `
 
 export const StyledImg = styled(Img)`
-  max-width: 100%;
-  height: auto;
   border-radius: 8px;
 `
