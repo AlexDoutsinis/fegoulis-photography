@@ -12,7 +12,7 @@ const RenderCollections = () => {
             title
             slug
             thumbnail {
-              fluid(maxWidth: 800, quality: 20) {
+              fluid(maxWidth: 800, quality: 30) {
                 ...GatsbyContentfulFluid_withWebp
               }
             }
