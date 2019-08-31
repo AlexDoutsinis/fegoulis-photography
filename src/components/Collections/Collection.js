@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 const Collection = ({ node }) => (
   <Link to={`/collection/${node.slug}`}>
-    {node.thumbnail && <Img fluid={node.thumbnail.fluid} />}
+    <Img fluid={node.thumbnail.fluid} />
   </Link>
 )
 
