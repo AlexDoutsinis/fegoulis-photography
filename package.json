@@ -13,10 +13,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.22",
-    "@fortawesome/free-brands-svg-icons": "^5.10.2",
-    "@fortawesome/free-solid-svg-icons": "^5.10.2",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.15.0",
     "gatsby-image": "^2.2.15",
@@ -26,6 +22,7 @@
     "gatsby-transformer-sharp": "^2.2.12",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-icons": "^3.7.0",
     "react-images": "^1.0.0",
     "styled-components": "^5.0.0-beta.8-groupsizefix",
     "styled-media-query": "^2.1.2"

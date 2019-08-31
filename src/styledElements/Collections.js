@@ -8,6 +8,10 @@ export const StyledGrid = styled.div`
   flex-direction: column;
   z-index: 1;
   width: 50%;
+
+  ${media.lessThan("small")`
+      width: 100%;
+  `}
 `
 
 // Collection template gallery

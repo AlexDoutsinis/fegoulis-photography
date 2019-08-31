@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 // import media from "styled-media-query"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+import { FaTimes, FaInstagram, FaFacebookF } from "react-icons/fa"
 
 export const StyledMenu = styled.div`
   height: 100vh;
@@ -20,13 +21,17 @@ export const StyledMenu = styled.div`
     `};
 `
 
-export const StyledX = styled(FontAwesomeIcon)`
+export const StyledPlaceholder = styled.div`
+  height: 3vh;
+`
+
+export const StyledX = styled(FaTimes)`
   color: #fff;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  padding-left: 0.5rem;
-  height: 8vh;
+  padding: 0 0 0.7rem 0.3rem;
+  /* height: 8vh; */
 `
 
 export const StyledLi = styled.li`
@@ -57,7 +62,16 @@ export const StyledSocialBox = styled.div`
   margin-left: 0.2rem;
 `
 
-export const StyledSocialIcon = styled(FontAwesomeIcon)`
+export const StyledInstagram = styled(FaInstagram)`
+  display: inline-block;
+  margin-right: 1.1rem;
+
+  &:hover {
+    color: #fff;
+  }
+`
+
+export const StyledFacebook = styled(FaFacebookF)`
   display: inline-block;
   margin-right: 1.1rem;
 

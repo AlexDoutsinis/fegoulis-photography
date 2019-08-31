@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+import { FaBars } from "react-icons/fa"
 
 import { Link } from "gatsby"
 
@@ -22,7 +23,7 @@ export const StyledNavBar = styled.div`
   align-items: center;
 `
 
-export const StyledBars = styled(FontAwesomeIcon)`
+export const StyledBars = styled(FaBars)`
   display: none;
 
   ${media.lessThan("small")`
