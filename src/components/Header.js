@@ -12,8 +12,6 @@ import {
   StyledH1,
 } from "../styledElements/Header"
 
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -39,7 +37,7 @@ const Header = () => {
     <>
       <StyledHeader>
         <StyledNavBar>
-          <StyledBars icon={faBars} onClick={collapsedMenuClickHandler} />
+          <StyledBars onClick={collapsedMenuClickHandler} />
           <StyledH1LinkWrapper to="/">
             <StyledH1>{data.site.siteMetadata.title}</StyledH1>
           </StyledH1LinkWrapper>

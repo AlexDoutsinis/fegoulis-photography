@@ -31,7 +31,6 @@ export const StyledX = styled(FaTimes)`
   display: flex;
   align-items: center;
   padding: 0 0 0.7rem 0.3rem;
-  /* height: 8vh; */
 `
 
 export const StyledLi = styled.li`

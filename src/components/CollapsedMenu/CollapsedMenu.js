@@ -16,6 +16,7 @@ const CollapsedMenu = ({ show, close }) => {
     <StyledMenu show={show}>
       <StyledPlaceholder />
       <StyledX onClick={close} />
+
       <ul>
         <StyledLi>
           <Link to="/">Work</Link>
@@ -27,6 +28,7 @@ const CollapsedMenu = ({ show, close }) => {
           <Link to="/">Contact</Link>
         </StyledLi>
       </ul>
+
       <StyledSocialBox>
         <StyledInstagram />
         <StyledFacebook />
