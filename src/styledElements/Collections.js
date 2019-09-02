@@ -9,7 +9,7 @@ export const StyledGrid = styled.div`
   z-index: 1;
   width: 50%;
 
-  ${media.lessThan("small")`
+  ${media.lessThan("medium")`
       width: 100%;
   `}
 `
@@ -25,12 +25,12 @@ export const StyledInfoBox = styled.div`
 `
 
 export const StyledTitle = styled.h2`
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   color: #fff;
 `
 
 export const StyledParagraph = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #fff;
   margin-top: 1.5rem;
   color: #999;
@@ -49,7 +49,6 @@ export const StyledGallery = styled.div`
   `}
 `
 
-// Collection gallery grid
 export const StyledImgWrapper = styled.div`
   margin: 0 1.5rem;
   &:not(:first-child) {

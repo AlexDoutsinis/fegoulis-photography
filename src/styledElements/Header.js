@@ -36,6 +36,7 @@ export const StyledBars = styled(FaBars)`
 
 export const StyledH1LinkWrapper = styled(Link)`
   margin-left: 0.9rem;
+  margin-top: 0.15rem;
 `
 
 export const StyledH1 = styled.h1`

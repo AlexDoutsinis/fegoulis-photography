@@ -13,16 +13,6 @@ import {
 } from "../styledElements/Header"
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   const [open, setOpen] = useState(false)
 
   const collapsedMenuClickHandler = () => setOpen(open => !open)
@@ -39,7 +29,7 @@ const Header = () => {
         <StyledNavBar>
           <StyledBars onClick={collapsedMenuClickHandler} />
           <StyledH1LinkWrapper to="/">
-            <StyledH1>{data.site.siteMetadata.title}</StyledH1>
+            <StyledH1>Fegoulis</StyledH1>
           </StyledH1LinkWrapper>
         </StyledNavBar>
       </StyledHeader>

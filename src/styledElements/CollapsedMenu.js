@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 // import media from "styled-media-query"
 
-import { FaTimes, FaInstagram, FaFacebookF } from "react-icons/fa"
+import { FaTimes } from "react-icons/fa"
 
 export const StyledMenu = styled.div`
   height: 100vh;
@@ -50,32 +50,6 @@ export const StyledLi = styled.li`
     display: inline-block;
     width: 100%;
     border-bottom: 1px solid #333333;
-  }
-`
-
-export const StyledSocialBox = styled.div`
-  display: inline-block;
-  color: #555555;
-  margin-top: 2.3rem;
-  font-size: 1.1rem;
-  margin-left: 0.2rem;
-`
-
-export const StyledInstagram = styled(FaInstagram)`
-  display: inline-block;
-  margin-right: 1.1rem;
-
-  &:hover {
-    color: #fff;
-  }
-`
-
-export const StyledFacebook = styled(FaFacebookF)`
-  display: inline-block;
-  margin-right: 1.1rem;
-
-  &:hover {
-    color: #fff;
   }
 `
 

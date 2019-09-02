@@ -6,10 +6,14 @@ import {
   StyledPlaceholder,
   StyledX,
   StyledLi,
+} from "../../styledElements/CollapsedMenu"
+
+import {
   StyledSocialBox,
+  StyledAnchorLink,
   StyledInstagram,
   StyledFacebook,
-} from "../../styledElements/CollapsedMenu"
+} from "../../styledElements/SocialIcons"
 
 const CollapsedMenu = ({ show, close }) => {
   return (
@@ -30,8 +34,18 @@ const CollapsedMenu = ({ show, close }) => {
       </ul>
 
       <StyledSocialBox>
-        <StyledInstagram />
-        <StyledFacebook />
+        <StyledAnchorLink
+          href="https://www.instagram.com/kostasfeg21"
+          target="__blank"
+        >
+          <StyledInstagram />
+        </StyledAnchorLink>
+        <StyledAnchorLink
+          href="https://www.facebook.com/kfegoulis"
+          target="__blank"
+        >
+          <StyledFacebook />
+        </StyledAnchorLink>
       </StyledSocialBox>
     </StyledMenu>
   )
