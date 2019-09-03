@@ -2,10 +2,7 @@ import React from "react"
 
 import MenuLinks from "./MenuLinks"
 
-import {
-  DesktopMenuWrapper,
-  StyledDesktopMenuLi,
-} from "../../styledElements/Menu"
+import { DesktopMenuWrapper } from "../../styledElements/Menu"
 
 const DesktopMenu = () => (
   <DesktopMenuWrapper>

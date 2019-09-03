@@ -17,7 +17,7 @@ export const query = graphql`
       title
       description
       gallery {
-        fluid(maxWidth: 1800, quality: 70) {
+        fluid(maxWidth: 1800, quality: 75) {
           ...GatsbyContentfulFluid_withWebp
         }
       }
