@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
 
 import CollapsedMenu from "./CollapsedMenu/CollapsedMenu"
 import Backdrop from "./CollapsedMenu/Backdrop"
+import DesktopMenu from "./DesktopMenu"
 
 import {
   StyledHeader,
@@ -31,6 +31,7 @@ const Header = () => {
           <StyledH1LinkWrapper to="/">
             <StyledH1>Fegoulis</StyledH1>
           </StyledH1LinkWrapper>
+          <DesktopMenu />
         </StyledNavBar>
       </StyledHeader>
       <CollapsedMenu show={open} close={collapsedMenuClickHandler} />

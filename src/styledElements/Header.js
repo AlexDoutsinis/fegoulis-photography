@@ -10,7 +10,7 @@ export const StyledHeader = styled.header`
   width: 100vw; */
 
   height: 100vh;
-  width: 22vw;
+  width: 20vw;
 
   background-color: #000;
   /* padding: 0 1.2rem; */
@@ -34,6 +34,8 @@ export const StyledNavBar = styled.div`
 
   /* border: solid red 2px; */
 
+  position: relative;
+
   ${media.lessThan("medium")`
     height: 100%;
     display: flex;
@@ -43,7 +45,7 @@ export const StyledNavBar = styled.div`
 `
 
 export const StyledBars = styled(IoMdMenu)`
-  display: inline-block;
+  display: none;
   color: #fff;
   
   /* ${media.lessThan("medium")`
@@ -57,14 +59,27 @@ export const StyledBars = styled(IoMdMenu)`
   ${media.lessThan("large")`
     font-size: 1.4rem;
   `}
+
+  ${media.lessThan("medium")`
+    display: inline-block;
+  `}
 `
 
 export const StyledH1LinkWrapper = styled(Link)`
-  margin-left: 0.9rem;
-  margin-top: 0.15rem;
+  /* margin-left: 0.9rem;
+  margin-top: 0.15rem; */
+
+  ${media.lessThan("medium")`
+    margin-left: 0.9rem;
+    margin-top: 0.15rem;
+  `}
 `
 
 export const StyledH1 = styled.h1`
+  ${media.greaterThan("medium")`
+    display: inline-block;
+  `}
+  
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
@@ -81,4 +96,25 @@ export const StyledH1 = styled.h1`
   ${media.lessThan("large")`
     font-size: 1rem;
   `}
+`
+
+export const DesktopMenuWrapper = styled.div`
+  display: block;
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
+`
+
+export const StyledDesktopMenuLi = styled.li`
+  a {
+    color: white;
+    letter-spacing: 1.2px;
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+    /* padding: 0.8rem 0 0 0.5rem; */
+  }
 `

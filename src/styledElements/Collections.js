@@ -4,13 +4,20 @@ import media from "styled-media-query"
 
 // Collections grid
 export const StyledGrid = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   z-index: 1;
-  width: 50%;
+  width: 100%;
 
   ${media.lessThan("medium")`
-      width: 100%;
+      display: flex;
+      flex-direction: column;
 
       //! test
   `}

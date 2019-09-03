@@ -8,12 +8,7 @@ import {
   StyledLi,
 } from "../../styledElements/CollapsedMenu"
 
-import {
-  StyledSocialBox,
-  StyledAnchorLink,
-  StyledInstagram,
-  StyledFacebook,
-} from "../../styledElements/SocialIcons"
+import SocialIcons from "../SocialIcons"
 
 const CollapsedMenu = ({ show, close }) => {
   return (
@@ -33,21 +28,7 @@ const CollapsedMenu = ({ show, close }) => {
         </StyledLi>
       </ul>
 
-      <StyledSocialBox>
-        <StyledAnchorLink
-          href="https://www.instagram.com/kostasfeg21"
-          target="__blank"
-        >
-          <StyledInstagram />
-        </StyledAnchorLink>
-
-        <StyledAnchorLink
-          href="https://www.facebook.com/kfegoulis"
-          target="__blank"
-        >
-          <StyledFacebook />
-        </StyledAnchorLink>
-      </StyledSocialBox>
+      <SocialIcons />
     </StyledMenu>
   )
 }

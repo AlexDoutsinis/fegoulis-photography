@@ -2,7 +2,7 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const StyledContent = styled.section`
-  margin-left: 13vw;
+  margin-left: 20vw;
 
   ${media.lessThan("medium")`
   width: 100vw;
