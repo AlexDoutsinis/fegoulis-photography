@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
-import { FaTimes } from "react-icons/fa"
+import { IoMdClose } from "react-icons/io"
 
 export const StyledMenu = styled.div`
   height: 100vh;
@@ -12,6 +12,12 @@ export const StyledMenu = styled.div`
   background-color: #000;
   padding-left: 1.2rem;
   z-index: 2;
+
+  ${media.lessThan("medium")`
+    /* transform: translateX(-100%);
+    transition: transform 0.3s ease-out; */
+  `}
+
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
   ${props =>
@@ -25,7 +31,7 @@ export const StyledPlaceholder = styled.div`
   height: 3vh;
 `
 
-export const StyledX = styled(FaTimes)`
+export const StyledX = styled(IoMdClose)`
   color: #fff;
   font-size: 1.2rem;
   display: flex;

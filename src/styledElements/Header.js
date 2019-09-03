@@ -1,31 +1,48 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { FaBars } from "react-icons/fa"
+import { IoMdMenu } from "react-icons/io"
 
 import { Link } from "gatsby"
 
 export const StyledHeader = styled.header`
-  height: 8vh;
-  width: 100vw;
+  /* height: 8vh;
+  width: 100vw; */
+
+  height: 100vh;
+  width: 22vw;
+
   background-color: #000;
-  padding: 0 1.2rem;
+  /* padding: 0 1.2rem; */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 
-  //! test
+  ${media.lessThan("medium")`
+    height: 8vh;
+    width: 100vw;
+    padding: 0 1.2rem;
+  `}
 `
 
 export const StyledNavBar = styled.div`
-  height: 100%;
+  /* height: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; */
+
+  /* border: solid red 2px; */
+
+  ${media.lessThan("medium")`
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  `}
 `
 
-export const StyledBars = styled(FaBars)`
+export const StyledBars = styled(IoMdMenu)`
   display: inline-block;
   color: #fff;
   
@@ -38,7 +55,7 @@ export const StyledBars = styled(FaBars)`
   `} */
 
   ${media.lessThan("large")`
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   `}
 `
 
