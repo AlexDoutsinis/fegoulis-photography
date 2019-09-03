@@ -1,17 +1,28 @@
 import React from "react"
+import { Link } from "gatsby"
 
-import StyledLi from "../../styledElements/Menu"
+import { StyledLi } from "../../styledElements/Menu"
+
+const color = {
+  color: "#7F7F7F",
+}
 
 const MenuLinks = () => (
   <ul>
     <StyledLi>
-      <Link to="/">Work</Link>
+      <Link activeStyle={color} to="/">
+        Work
+      </Link>
     </StyledLi>
     <StyledLi>
-      <Link to="/">About</Link>
+      <Link activeStyle={color} to="/about">
+        About
+      </Link>
     </StyledLi>
     <StyledLi>
-      <Link to="/">Contact</Link>
+      <Link activeStyle={color} to="/contact">
+        Contact
+      </Link>
     </StyledLi>
   </ul>
 )

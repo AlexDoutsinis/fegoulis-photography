@@ -49,17 +49,19 @@ export const StyledLi = styled.li`
     display: inline-block;
     padding: 0.8rem 0 0 0.5rem;
 
-    ${media.lessThan("large")`
-      font-size: .9rem;
+    ${media.greaterThan("medium")`
+      padding: 0;
     `}
   }
 
   &:before {
-    content: "";
-    display: block;
-    width: 95%;
-    border-bottom: 1px solid #333333;
-    margin: 1rem 0 0.3rem 0;
+    ${media.lessThan("medium")`
+      content: "";
+      display: block;
+      width: 95%;
+      border-bottom: 1px solid #333333;
+      margin: 1rem 0 0.3rem 0;
+    `}
   }
 `
 
