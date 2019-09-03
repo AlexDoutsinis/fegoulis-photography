@@ -14,6 +14,8 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 2;
+
+  //! test
 `
 
 export const StyledNavBar = styled.div`
@@ -24,13 +26,19 @@ export const StyledNavBar = styled.div`
 `
 
 export const StyledBars = styled(FaBars)`
-  display: none;
-
-  ${media.lessThan("small")`
-
   display: inline-block;
   color: #fff;
-  font-size: 1.2rem;
+  
+  /* ${media.lessThan("medium")`
+      font-size: 1.4rem;
+  `}
+
+  ${media.lessThan("small")`
+      font-size: 1.2rem;
+  `} */
+
+  ${media.lessThan("large")`
+    font-size: 1.2rem;
   `}
 `
 
@@ -44,4 +52,16 @@ export const StyledH1 = styled.h1`
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.7px;
+
+  /* ${media.lessThan("medium")`
+      font-size: 1.2rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: 1rem;
+  `} */
+
+  ${media.lessThan("large")`
+    font-size: 1rem;
+  `}
 `

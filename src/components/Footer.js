@@ -21,6 +21,7 @@ const Footer = () => (
       >
         <StyledInstagram />
       </StyledAnchorLink>
+
       <StyledAnchorLink
         href="https://www.facebook.com/kfegoulis"
         target="__blank"
@@ -28,6 +29,7 @@ const Footer = () => (
         <StyledFacebook />
       </StyledAnchorLink>
     </StyledFooterSocialBox>
+
     <Info>
       <p>
         &copy; 2019 &#124; Made by{" "}

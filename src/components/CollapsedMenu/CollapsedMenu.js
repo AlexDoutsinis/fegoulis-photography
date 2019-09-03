@@ -40,6 +40,7 @@ const CollapsedMenu = ({ show, close }) => {
         >
           <StyledInstagram />
         </StyledAnchorLink>
+
         <StyledAnchorLink
           href="https://www.facebook.com/kfegoulis"
           target="__blank"

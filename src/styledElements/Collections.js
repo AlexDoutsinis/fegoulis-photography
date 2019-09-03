@@ -11,32 +11,65 @@ export const StyledGrid = styled.div`
 
   ${media.lessThan("medium")`
       width: 100%;
+
+      //! test
   `}
 `
 
 // Collection template gallery
 export const StyledInfoBox = styled.div`
-  height: 20vh;
+  height: 18vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `
 
 export const StyledTitle = styled.h2`
   font-size: 1.45rem;
   color: #fff;
+
+  ${media.lessThan("medium")`
+    font-size: 2.8rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: 1.45rem;
+  `}
+
+  /* ${media.lessThan("large")`
+    font-size: 2rem;
+  `} */
+
+  position: absolute;
+
+  top: 32%;
+
 `
 
 export const StyledParagraph = styled.p`
   font-size: 0.95rem;
   color: #fff;
-  margin-top: 1.5rem;
+  position: absolute;
+  bottom: 28%;
   color: #999;
   font-family: "Pathway Gothic One", sans-serif;
   text-transform: capitalize;
   font-weight: 400;
+  
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: .9rem;
+  `}
+  /* ${media.lessThan("large")`
+    font-size: .9rem;
+  `} */
+
 `
 
 export const StyledGallery = styled.div`
@@ -44,7 +77,11 @@ export const StyledGallery = styled.div`
   flex-direction: column;
   width: 50%;
 
-  ${media.lessThan("small")`
+  /* ${media.lessThan("small")`
+      width: 100%;
+  `} */
+
+  ${media.lessThan("large")`
       width: 100%;
   `}
 `

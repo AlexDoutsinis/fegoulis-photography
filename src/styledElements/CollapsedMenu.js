@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-// import media from "styled-media-query"
+import media from "styled-media-query"
 
 import { FaTimes } from "react-icons/fa"
 
@@ -31,6 +31,18 @@ export const StyledX = styled(FaTimes)`
   display: flex;
   align-items: center;
   padding: 0 0 0.7rem 0.3rem;
+
+  /* ${media.lessThan("medium")`
+      font-size: 1.7rem;
+  `} */
+
+  /* ${media.lessThan("small")`
+    font-size: 1.5rem;
+  `} */
+
+  ${media.lessThan("large")`
+    font-size: 1.5rem;
+  `}
 `
 
 export const StyledLi = styled.li`
@@ -43,13 +55,33 @@ export const StyledLi = styled.li`
     text-transform: uppercase;
     display: inline-block;
     padding: 0.8rem 0 0 0.5rem;
+
+    /* ${media.lessThan("medium")`
+      font-size: .9rem;
+  `} */
+
+    /* ${media.lessThan("small")`
+      font-size: .9rem;
+    `} */
+
+    ${media.lessThan("large")`
+      font-size: .9rem;
+    `}
   }
 
   &:before {
     content: "";
-    display: inline-block;
-    width: 100%;
+    /* display: inline-block;
+    width: 100%; */
+
+    display: block;
+    width: 95%;
     border-bottom: 1px solid #333333;
+    /* margin-top: 1rem; */
+    /* margin-top: 1rem;
+    margin-bottom: .2rem; */
+    
+    margin: 1rem 0 .3rem 0
   }
 `
 
