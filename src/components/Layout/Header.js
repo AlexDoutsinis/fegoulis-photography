@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-import CollapsedMenu from "./CollapsedMenu/CollapsedMenu"
-import Backdrop from "./CollapsedMenu/Backdrop"
-import DesktopMenu from "./DesktopMenu"
+import ResponsiveMenu from "../Menu/ResponsiveMenu"
+import Backdrop from "../Menu/Backdrop"
+import DesktopMenu from "../Menu/DesktopMenu"
 
 import {
   StyledHeader,
@@ -10,7 +10,7 @@ import {
   StyledBars,
   StyledH1LinkWrapper,
   StyledH1,
-} from "../styledElements/Header"
+} from "../../styledElements/Header"
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -34,7 +34,7 @@ const Header = () => {
           <DesktopMenu />
         </StyledNavBar>
       </StyledHeader>
-      <CollapsedMenu show={open} close={collapsedMenuClickHandler} />
+      <ResponsiveMenu show={open} close={collapsedMenuClickHandler} />
       {backdrop}
     </>
   )

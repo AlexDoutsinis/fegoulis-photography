@@ -4,13 +4,13 @@ import {
   StyledFooter,
   StyledFooterSocialBox,
   Info,
-} from "../styledElements/Footer"
+} from "../../styledElements/Footer"
 
 import {
   StyledAnchorLink,
   StyledInstagram,
   StyledFacebook,
-} from "../styledElements/SocialIcons"
+} from "../../styledElements/SocialIcons"
 
 const Footer = () => (
   <StyledFooter>

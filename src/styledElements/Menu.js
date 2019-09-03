@@ -3,7 +3,7 @@ import media from "styled-media-query"
 
 import { IoMdClose } from "react-icons/io"
 
-export const StyledMenu = styled.div`
+export const StyledCollapsedMenu = styled.div`
   height: 100vh;
   width: 80vw;
   position: fixed;
@@ -12,11 +12,6 @@ export const StyledMenu = styled.div`
   background-color: #000;
   padding-left: 1.2rem;
   z-index: 2;
-
-  ${media.lessThan("medium")`
-    /* transform: translateX(-100%);
-    transition: transform 0.3s ease-out; */
-  `}
 
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
@@ -38,14 +33,6 @@ export const StyledX = styled(IoMdClose)`
   align-items: center;
   padding: 0 0 0.7rem 0.3rem;
 
-  /* ${media.lessThan("medium")`
-      font-size: 1.7rem;
-  `} */
-
-  /* ${media.lessThan("small")`
-    font-size: 1.5rem;
-  `} */
-
   ${media.lessThan("large")`
     font-size: 1.5rem;
   `}
@@ -62,14 +49,6 @@ export const StyledLi = styled.li`
     display: inline-block;
     padding: 0.8rem 0 0 0.5rem;
 
-    /* ${media.lessThan("medium")`
-      font-size: .9rem;
-  `} */
-
-    /* ${media.lessThan("small")`
-      font-size: .9rem;
-    `} */
-
     ${media.lessThan("large")`
       font-size: .9rem;
     `}
@@ -77,17 +56,10 @@ export const StyledLi = styled.li`
 
   &:before {
     content: "";
-    /* display: inline-block;
-    width: 100%; */
-
     display: block;
     width: 95%;
     border-bottom: 1px solid #333333;
-    /* margin-top: 1rem; */
-    /* margin-top: 1rem;
-    margin-bottom: .2rem; */
-    
-    margin: 1rem 0 .3rem 0
+    margin: 1rem 0 0.3rem 0;
   }
 `
 
@@ -99,4 +71,24 @@ export const StyledBackdrop = styled.div`
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
+`
+
+export const DesktopMenuWrapper = styled.div`
+  display: block;
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
+`
+
+export const StyledDesktopMenuLi = styled.li`
+  a {
+    color: white;
+    letter-spacing: 1.2px;
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+  }
 `

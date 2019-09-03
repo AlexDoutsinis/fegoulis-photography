@@ -2,17 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 
 import {
-  StyledMenu,
+  StyledCollapsedMenu,
   StyledPlaceholder,
   StyledX,
   StyledLi,
-} from "../../styledElements/CollapsedMenu"
+} from "../../styledElements/Menu"
 
 import SocialIcons from "../SocialIcons"
 
 const CollapsedMenu = ({ show, close }) => {
   return (
-    <StyledMenu show={show}>
+    <StyledCollapsedMenu show={show}>
       <StyledPlaceholder />
       <StyledX onClick={close} />
 
@@ -29,7 +29,7 @@ const CollapsedMenu = ({ show, close }) => {
       </ul>
 
       <SocialIcons />
-    </StyledMenu>
+    </StyledCollapsedMenu>
   )
 }
 

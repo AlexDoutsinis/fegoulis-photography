@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import {
   DesktopMenuWrapper,
   StyledDesktopMenuLi,
-} from "../styledElements/Header"
+} from "../../styledElements/Menu"
 
 const DesktopMenu = () => (
   <DesktopMenuWrapper>

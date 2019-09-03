@@ -4,22 +4,14 @@ import media from "styled-media-query"
 
 // Collections grid
 export const StyledGrid = styled.div`
-  /* display: flex;
-  flex-direction: column; */
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   z-index: 1;
   width: 100%;
 
   ${media.lessThan("medium")`
       display: flex;
       flex-direction: column;
-
-      //! test
   `}
 `
 
@@ -46,12 +38,7 @@ export const StyledTitle = styled.h2`
     font-size: 1.45rem;
   `}
 
-  /* ${media.lessThan("large")`
-    font-size: 2rem;
-  `} */
-
   position: absolute;
-
   top: 32%;
 
 `
@@ -73,20 +60,12 @@ export const StyledParagraph = styled.p`
   ${media.lessThan("small")`
     font-size: .9rem;
   `}
-  /* ${media.lessThan("large")`
-    font-size: .9rem;
-  `} */
-
 `
 
 export const StyledGallery = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-
-  /* ${media.lessThan("small")`
-      width: 100%;
-  `} */
 
   ${media.lessThan("large")`
       width: 100%;
@@ -95,6 +74,7 @@ export const StyledGallery = styled.div`
 
 export const StyledImgWrapper = styled.div`
   margin: 0 1.5rem;
+  
   &:not(:first-child) {
     margin-top: 2rem;
   }

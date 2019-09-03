@@ -13,10 +13,6 @@ export const StyledAnchorLink = styled.a`
   color: #555555;
   font-size: 1.2rem;
 
-  /* ${media.lessThan("small")`
-  font-size: 1.2rem;
-  `} */
-
   ${media.lessThan("large")`
   font-size: 1.2rem;
   `}

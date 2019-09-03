@@ -26,14 +26,6 @@ export const Info = styled.div`
     font-size: 0.9rem;
     color: #555555;
 
-    /* ${media.lessThan("medium")`
-      margin-top: 1rem;
-    `} */
-
-    /* ${media.lessThan("small")`
-      font-size: .9rem;
-    `} */
-
     ${media.lessThan("large")`
       font-size: .9rem;
     `}
