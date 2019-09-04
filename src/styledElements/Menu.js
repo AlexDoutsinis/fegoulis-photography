@@ -51,13 +51,16 @@ export const StyledLi = styled.li`
 
     ${media.greaterThan("large")`
     font-size: 1.1rem;
-  
-  `}
+    `}
 
     ${media.greaterThan("medium")`
       padding: 0;
       margin-bottom: 1.2rem;
     `}
+
+    &:hover {
+      color: #7f7f7f;
+    }
   }
 
   &:before {
