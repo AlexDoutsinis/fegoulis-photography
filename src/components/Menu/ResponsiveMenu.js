@@ -15,7 +15,7 @@ const CollapsedMenu = ({ show, close }) => {
       <StyledPlaceholder />
       <StyledX onClick={close} />
       <MenuLinks />
-      <SocialIcons />
+      <SocialIcons collapsedMT="setMT" />
     </StyledCollapsedMenu>
   )
 }

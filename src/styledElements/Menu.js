@@ -49,8 +49,14 @@ export const StyledLi = styled.li`
     display: inline-block;
     padding: 0.8rem 0 0 0.5rem;
 
+    ${media.greaterThan("large")`
+    font-size: 1.1rem;
+  
+  `}
+
     ${media.greaterThan("medium")`
       padding: 0;
+      margin-bottom: 1.2rem;
     `}
   }
 
@@ -81,16 +87,4 @@ export const DesktopMenuWrapper = styled.div`
   ${media.lessThan("medium")`
     display: none;
   `}
-`
-
-export const StyledDesktopMenuLi = styled.li`
-  a {
-    color: white;
-    letter-spacing: 1.2px;
-    font-family: "Pathway Gothic One", sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    display: inline-block;
-  }
 `

@@ -4,18 +4,23 @@ import media from "styled-media-query"
 import { FaInstagram, FaFacebookF } from "react-icons/fa"
 
 export const StyledSocialBox = styled.div`
-  display: inline-block;
-  margin-top: 2.3rem;
-  margin-left: 0.2rem;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: ${props => props.collapsedMT === "setMT" && "2rem"};
+  margin-left: 0.5rem;
+
+  ${media.greaterThan("medium")`
+    margin-top: 1rem;
+    margin-left: 0;
+  `}
 `
 
 export const StyledAnchorLink = styled.a`
   color: #555555;
   font-size: 1.2rem;
-
-  ${media.lessThan("large")`
-  font-size: 1.2rem;
-  `}
 `
 
 export const StyledInstagram = styled(FaInstagram)`
@@ -26,6 +31,10 @@ export const StyledInstagram = styled(FaInstagram)`
   &:hover {
     color: #fff;
   }
+
+  ${media.greaterThan("medium")`
+    margin: 0;
+  `}
 `
 
 export const StyledFacebook = styled(FaFacebookF)`
@@ -36,4 +45,9 @@ export const StyledFacebook = styled(FaFacebookF)`
   &:hover {
     color: #fff;
   }
+
+  ${media.greaterThan("medium")`
+    margin: 0;
+  
+  `}
 `

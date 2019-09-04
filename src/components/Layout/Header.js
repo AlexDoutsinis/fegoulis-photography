@@ -29,7 +29,10 @@ const Header = () => {
         <StyledNavBar>
           <StyledBars onClick={collapsedMenuClickHandler} />
           <StyledH1LinkWrapper to="/">
-            <StyledH1>Fegoulis</StyledH1>
+            <StyledH1>
+              Fegoulis
+              <span>Photography</span>
+            </StyledH1>
           </StyledH1LinkWrapper>
           <DesktopMenu />
         </StyledNavBar>

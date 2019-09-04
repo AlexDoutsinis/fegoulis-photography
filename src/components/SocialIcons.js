@@ -7,8 +7,8 @@ import {
   StyledFacebook,
 } from "../styledElements/SocialIcons"
 
-const SocialIcons = () => (
-  <StyledSocialBox>
+const SocialIcons = ({ collapsedMT }) => (
+  <StyledSocialBox collapsedMT={collapsedMT}>
     <StyledAnchorLink
       href="https://www.instagram.com/kostasfeg21"
       target="__blank"

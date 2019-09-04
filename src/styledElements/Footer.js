@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { StyledSocialBox } from "./SocialIcons"
-
 export const StyledFooter = styled.footer`
   height: 15vh;
   background-color: #000;
@@ -11,15 +9,28 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
 
-export const StyledFooterSocialBox = styled(StyledSocialBox)`
-  margin: 0;
-  margin-top: 0.3rem;
+  ${media.greaterThan("medium")`
+    height: 12vh;
+  `}
+
+  ${media.greaterThan("huge")`
+    height: 18vh
+  `}
 `
 
 export const Info = styled.div`
-  margin-top: 1.2rem;
+    ${media.greaterThan("medium")`
+      margin-top: 1.5rem;
+    `}
+  
+    ${media.greaterThan("large")`
+      
+    `}
+  
+    ${media.lessThan("medium")`
+      margin-top: 1.2rem;
+    `}
 
   p {
     display: inline-block;

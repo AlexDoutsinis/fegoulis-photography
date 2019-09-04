@@ -7,13 +7,19 @@ import { Link } from "gatsby"
 
 export const StyledHeader = styled.header`
   height: 100vh;
-  width: 20vw;
-
   background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
+
+  ${media.greaterThan("medium")`
+    width: 23vw;
+  `}
+
+  ${media.greaterThan("huge")`
+    width: 20vw
+  `}
 
   ${media.lessThan("medium")`
     height: 8vh;
@@ -23,13 +29,24 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledNavBar = styled.div`
-  position: relative;
+  display: flex;
+
+  ${media.greaterThan("medium")`
+    flex-direction: column;
+    margin-left: 2rem;
+  `}
+
+  ${media.greaterThan("large")`
+    flex-direction: column;
+    margin-left: 3.2rem;
+  `}
 
   ${media.lessThan("medium")`
     height: 100%;
-    display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 0;
+    
   `}
 `
 
@@ -54,16 +71,30 @@ export const StyledH1LinkWrapper = styled(Link)`
 `
 
 export const StyledH1 = styled.h1`
+  span {
+    display: block;
+    margin-top: 0.3rem;
+  }
+
   ${media.greaterThan("medium")`
-    display: inline-block;
+    margin: 2.8rem 0 2.1rem 0;
   `}
+
+  ${media.greaterThan("large")`
+    font-size: 1.2rem;
+  `}
+
+  ${media.lessThan("medium")`
+      span {
+        margin-top: 0;
+        display: none;
+      }
+
+      margin: 0;
+    `}
 
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.7px;
-
-  ${media.lessThan("large")`
-    font-size: 1rem;
-  `}
 `

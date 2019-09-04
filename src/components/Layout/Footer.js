@@ -1,35 +1,12 @@
 import React from "react"
 
-import {
-  StyledFooter,
-  StyledFooterSocialBox,
-  Info,
-} from "../../styledElements/Footer"
+import { StyledFooter, Info } from "../../styledElements/Footer"
 
-import {
-  StyledAnchorLink,
-  StyledInstagram,
-  StyledFacebook,
-} from "../../styledElements/SocialIcons"
+import SocialIcons from "../SocialIcons"
 
 const Footer = () => (
   <StyledFooter>
-    <StyledFooterSocialBox>
-      <StyledAnchorLink
-        href="https://www.instagram.com/kostasfeg21"
-        target="__blank"
-      >
-        <StyledInstagram />
-      </StyledAnchorLink>
-
-      <StyledAnchorLink
-        href="https://www.facebook.com/kfegoulis"
-        target="__blank"
-      >
-        <StyledFacebook />
-      </StyledAnchorLink>
-    </StyledFooterSocialBox>
-
+    <SocialIcons />
     <Info>
       <p>
         &copy; 2019 &#124; Made by{" "}
