@@ -13,12 +13,16 @@ export const StyledHeader = styled.header`
   left: 0;
   z-index: 2;
 
-  ${media.greaterThan("medium")`
+  ${media.greaterThan("1024px")`
     width: 23vw;
   `}
 
   ${media.greaterThan("huge")`
-    width: 20vw
+    width: 20vw;
+  `}
+
+  ${media.between("medium", "1023px")`
+    width: 30vw;
   `}
 
   ${media.lessThan("medium")`
@@ -77,11 +81,16 @@ export const StyledH1 = styled.h1`
   }
 
   ${media.greaterThan("medium")`
-    margin: 2.8rem 0 2.1rem 0;
+    margin-top: 5.3rem;
+    margin-bottom: 2.1rem;
   `}
 
   ${media.greaterThan("large")`
     font-size: 1.2rem;
+  `}
+
+  ${media.greaterThan("huge")`
+      margin-top: 6rem;
   `}
 
   ${media.lessThan("medium")`

@@ -50,7 +50,7 @@ export const StyledLi = styled.li`
     padding: 0.8rem 0 0 0.5rem;
 
     ${media.greaterThan("large")`
-    font-size: 1.1rem;
+      font-size: 1.1rem;
     `}
 
     ${media.greaterThan("medium")`
@@ -72,6 +72,11 @@ export const StyledLi = styled.li`
       margin: 1rem 0 0.3rem 0;
     `}
   }
+`
+
+export const DesktopMenuPlaceholder = styled.div`
+  width: 100%;
+  height: 0.8rem;
 `
 
 export const StyledBackdrop = styled.div`

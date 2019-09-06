@@ -5,56 +5,77 @@ import media from "styled-media-query"
 // Collections grid
 export const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+  margin-right: 4rem;
   z-index: 1;
-  width: 100%;
+
+  ${media.greaterThan("769px")`
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-auto-flow: dense;
+    grid-gap: 1.5rem;
+  `}
+
+  ${media.greaterThan("huge")`
+    grid-template-columns: 1.33fr 1.4fr 1.33fr;
+    grid-gap: 1.2rem;
+  `}
 
   ${media.lessThan("medium")`
       display: flex;
       flex-direction: column;
+      margin: 0;
   `}
 `
 
 // Collection template gallery
 export const StyledInfoBox = styled.div`
-  height: 18vh;
-  width: 100vw;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-wrap: wrap;
+
+  ${media.greaterThan("medium")`
+    margin-bottom: 1.5rem;
+  `}
+
+  ${media.greaterThan("huge")`
+    margin-bottom: 3.5rem;
+  `}
 `
 
 export const StyledTitle = styled.h2`
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   color: #fff;
+  margin-bottom: 1.5rem;
 
-  ${media.lessThan("medium")`
+  ${media.greaterThan("medium")`
     font-size: 2.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
   `}
 
-  ${media.lessThan("small")`
-    font-size: 1.45rem;
+  ${media.greaterThan("large")`
+    margin-top: 3.5rem;
   `}
 
-  position: absolute;
-  top: 32%;
-
+  ${media.greaterThan("huge")`
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  `}
 `
 
 export const StyledParagraph = styled.p`
-  font-size: 0.95rem;
-  color: #fff;
-  position: absolute;
-  bottom: 28%;
+  font-size: 1rem;
   color: #999;
   font-family: "Pathway Gothic One", sans-serif;
   text-transform: capitalize;
   font-weight: 400;
-  
+
   ${media.lessThan("medium")`
-    font-size: 1rem;
+    padding: 0 2.5rem;
   `}
 
   ${media.lessThan("small")`
@@ -63,23 +84,42 @@ export const StyledParagraph = styled.p`
 `
 
 export const StyledGallery = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  display: grid;
 
-  ${media.lessThan("large")`
-      width: 100%;
+  ${media.greaterThan("small")`
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    align-items: center;
+    grid-gap: 1.5rem;
+    margin: 0 2rem;
+  `}
+
+  ${media.greaterThan("769px")`
+    margin-left: 0;
+    margin-right: 3rem;
+  `}
+
+  ${media.greaterThan("huge")`
+    margin-right: 4rem;
+  `}
+
+  ${media.lessThan("medium")`
+    margin: 0 2rem;
+  `}
+
+  ${media.lessThan("small")`
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
   `}
 `
 
 export const StyledImgWrapper = styled.div`
-  margin: 0 1.5rem;
-  
+  cursor: zoom-in;
+
   &:not(:first-child) {
     margin-top: 2rem;
   }
-
-  cursor: zoom-in;
 `
 
 export const StyledImg = styled(Img)`
