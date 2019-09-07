@@ -30,7 +30,7 @@ const Header = () => {
           <StyledBars onClick={collapsedMenuClickHandler} />
           <StyledH1LinkWrapper to="/">
             <StyledH1>
-              Fegoulis
+              Fegoulis <br />
               <span>Photography</span>
             </StyledH1>
           </StyledH1LinkWrapper>

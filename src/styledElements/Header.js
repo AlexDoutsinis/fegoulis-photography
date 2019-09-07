@@ -41,7 +41,6 @@ export const StyledNavBar = styled.div`
   `}
 
   ${media.greaterThan("large")`
-    flex-direction: column;
     margin-left: 3.2rem;
   `}
 
@@ -50,7 +49,6 @@ export const StyledNavBar = styled.div`
     flex-direction: row;
     align-items: center;
     margin-left: 0;
-    
   `}
 `
 
@@ -68,29 +66,37 @@ export const StyledBars = styled(IoMdMenu)`
 `
 
 export const StyledH1LinkWrapper = styled(Link)`
-  ${media.lessThan("medium")`
-    margin-left: 0.9rem;
-    margin-top: 0.15rem;
-  `}
-`
-
-export const StyledH1 = styled.h1`
-  span {
-    display: block;
-    margin-top: 0.3rem;
-  }
+  display: inline-block;
+  width: fit-content;
 
   ${media.greaterThan("medium")`
     margin-top: 5.3rem;
     margin-bottom: 2.1rem;
   `}
 
-  ${media.greaterThan("large")`
-    font-size: 1.2rem;
+  ${media.greaterThan("huge")`
+    margin-top: 6rem;
   `}
 
-  ${media.greaterThan("huge")`
-      margin-top: 6rem;
+  ${media.lessThan("medium")`
+    margin: .15rem 0 0 .9rem;
+  `}
+`
+
+export const StyledH1 = styled.h1`
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+
+  span {
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
+
+  ${media.greaterThan("large")`
+    font-size: 1.2rem;
   `}
 
   ${media.lessThan("medium")`
@@ -101,9 +107,4 @@ export const StyledH1 = styled.h1`
 
       margin: 0;
     `}
-
-  font-size: 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1.7px;
 `
