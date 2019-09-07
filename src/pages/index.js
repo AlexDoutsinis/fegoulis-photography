@@ -5,12 +5,10 @@ import Collections from "../components/Collections/Collections"
 
 import "../globalStyle.css"
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <Collections />
-    </Layout>
-  )
-}
+const IndexPage = () => (
+  <Layout>
+    <Collections />
+  </Layout>
+)
 
 export default IndexPage

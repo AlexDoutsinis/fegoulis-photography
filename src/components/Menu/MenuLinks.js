@@ -11,7 +11,12 @@ const MenuLinks = () => (
   <ul>
     <StyledLi>
       <Link activeStyle={color} to="/">
-        Work
+        Projects
+      </Link>
+    </StyledLi>
+    <StyledLi>
+      <Link activeStyle={color} to="/instagram">
+        Instagram
       </Link>
     </StyledLi>
     <StyledLi>
