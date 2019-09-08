@@ -152,11 +152,12 @@ export const StyledGallery = styled.div`
   ${media.greaterThan("769px")`
     margin-left: 0;
     margin-right: 3rem;
+    grid-gap: 2rem;
   `}
 
   ${media.greaterThan("huge")`
     margin-right: 4rem;
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
   `}
 
   ${media.lessThan("small")`
