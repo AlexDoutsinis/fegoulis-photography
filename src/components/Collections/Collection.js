@@ -1,12 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Img from "gatsby-image"
+import { StyledLinkThumb } from "../../styledElements/Collections"
+
+import Thumbnail from "./Thumbnail"
 
 const Collection = ({ node }) => (
-  <Link to={`/collection/${node.slug}`}>
-    <Img fluid={node.thumbnail.fluid} />
-  </Link>
+  <StyledLinkThumb to={`/collection/${node.slug}`}>
+    <Thumbnail title={node.title} fluid={node.thumbnail.fluid} />
+  </StyledLinkThumb>
 )
 
 export default Collection

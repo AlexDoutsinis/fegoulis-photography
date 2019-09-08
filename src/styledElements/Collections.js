@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 import media from "styled-media-query"
 
@@ -26,6 +27,60 @@ export const StyledGrid = styled.div`
       flex-direction: column;
       margin: 0;
   `}
+`
+
+export const StyledLinkThumb = styled(Link)`
+  overflow: hidden;
+  position: relative;
+`
+
+export const StyledThumbBackdrop = styled.div`
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(36, 36, 36, 0.7);
+  transition: opacity 0.5s ease;
+`
+
+export const StyledImgThumbWrapper = styled.div`
+  span {
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    transition: transform 0.3s, visibility 0.2s;
+    transition-timing-function: ease;
+    z-index: 2;
+    visibility: hidden;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    ${StyledThumbBackdrop} {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    span {
+      visibility: visible;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: #fff;
+    }
+  }
+
+  transition: transform 0.3s ease;
 `
 
 // Collection template gallery
