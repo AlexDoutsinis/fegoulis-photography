@@ -156,10 +156,7 @@ export const StyledGallery = styled.div`
 
   ${media.greaterThan("huge")`
     margin-right: 4rem;
-  `}
-
-  ${media.lessThan("medium")`
-    margin: 0 2rem;
+    grid-gap: 2rem;
   `}
 
   ${media.lessThan("small")`
