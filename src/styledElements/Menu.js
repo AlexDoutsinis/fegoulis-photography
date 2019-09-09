@@ -61,6 +61,8 @@ export const StyledLi = styled.li`
     &:hover {
       color: #7f7f7f;
     }
+
+    transition: color 0.2s ease-in-out;
   }
 
   &:before {
