@@ -11,6 +11,15 @@ const Wrapper = styled.div`
   letter-spacing: 1.5px;
   padding-top: 4.5rem;
   margin-left: 4rem;
+
+  ${media.lessThan("medium")`
+    margin-left: 6rem;
+  `}
+
+  ${media.lessThan("small")`
+    font-size: .9rem;
+    margin-left: 2.5rem;
+  `}
 `
 
 const H2 = styled.h2`
@@ -27,10 +36,32 @@ const H2 = styled.h2`
 
     transition: border-bottom 0.2s ease;
   }
+
+  ${media.lessThan("small")`
+    font-size: .9rem;
+    margin-bottom: 3rem;
+    width: 80vw;
+  `}
 `
 
 const Form = styled.form`
   width: 30vw;
+
+  ${media.lessThan("huge")`
+    width: 35vw;
+  `}
+
+  ${media.lessThan("large")`
+    width: 45vw;
+  `}
+
+  ${media.lessThan("medium")`
+    width: 65vw;
+  `}
+
+  ${media.lessThan("small")`
+    width: 80vw;
+  `}
 `
 
 const HiddenBox = styled.div`
@@ -48,6 +79,18 @@ const Label = styled.label`
   display: inline-block;
 
   min-width: 18%;
+
+  ${media.lessThan("huge")`
+    min-width: 16%;
+  `}
+
+  ${media.lessThan("large")`
+    min-width: 15%;
+  `}
+
+  ${media.lessThan("small")`
+    min-width: 20%;
+  `}
 `
 
 const Input = styled.input`
@@ -104,6 +147,10 @@ export const Button = styled.button`
   }
 
   transition: background-color 0.2s ease;
+
+  ${media.lessThan("small")`
+    padding: 0.5rem 1rem;
+  `}
 `
 
 const ContactPage = () => (
