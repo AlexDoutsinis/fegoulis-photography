@@ -6,8 +6,6 @@ import media from "styled-media-query"
 // Collections grid
 export const StyledGrid = styled.div`
   display: grid;
-  margin-top: 4rem;
-  margin-right: 4rem;
   z-index: 1;
 
   ${media.greaterThan("769px")`
@@ -25,7 +23,6 @@ export const StyledGrid = styled.div`
   ${media.lessThan("medium")`
       display: flex;
       flex-direction: column;
-      margin: 0;
   `}
 `
 
@@ -152,6 +149,7 @@ export const StyledGallery = styled.div`
   ${media.greaterThan("769px")`
     margin-left: 0;
     margin-right: 3rem;
+
     grid-gap: 2rem;
   `}
 

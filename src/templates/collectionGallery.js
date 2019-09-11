@@ -27,7 +27,7 @@ export const query = graphql`
 
 const CollectionGallery = ({ data: { contentfulCollection } }) => {
   return (
-    <Layout>
+    <Layout mt={"0"}>
       <StyledInfoBox>
         <StyledTitle>{contentfulCollection.title}</StyledTitle>
         <StyledParagraph>{contentfulCollection.description}</StyledParagraph>

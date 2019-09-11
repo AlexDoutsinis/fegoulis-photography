@@ -7,11 +7,11 @@ import { StyledContent } from "../../styledElements/Content"
 
 const Layout = props => {
   return (
-    <div>
+    <>
       <Header />
-      <StyledContent>{props.children}</StyledContent>
+      <StyledContent mt={props.mt}>{props.children}</StyledContent>
       <Footer />
-    </div>
+    </>
   )
 }
 
