@@ -1,3 +1,3 @@
 # Fegoulis Photography
 
-## Discover wonderful photos taken by Kostas Fegoulis
+## Explore wonderfully photos taken by Kostas Fegoulis

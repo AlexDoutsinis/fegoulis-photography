@@ -4,7 +4,7 @@ module.exports = {
     description: "Explore wonderfully photos taken by Kostas Fegoulis",
     keywords: "photography, photos, images, pictures, gallery, kostas fegoulis",
     image: "/static/logo.jpg",
-    siteUrl: "https://www.gatsbyjs.org/",
+    siteUrl: "https://fegoulisphotography.netlify.com/",
   },
   plugins: [
     {
