@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import media from "styled-media-query"
+import SEO from "../components/SEO"
 
 import Layout from "../components/Layout/Layout"
 
@@ -155,6 +156,11 @@ export const Button = styled.button`
 
 const ContactPage = () => (
   <Layout>
+    <SEO
+      title="Contact"
+      description="Contact with Kostas Fegoulis"
+      keywords="contact"
+    />
     <Wrapper>
       <H2>
         Contact me via{" "}
