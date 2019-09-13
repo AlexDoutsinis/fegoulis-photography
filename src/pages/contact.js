@@ -174,33 +174,30 @@ const ContactPage = () => (
         data-netlify="true"
         netlify-honeypot="bot"
       >
-        <div>
-          <Input type="hidden" name="form-name" value="contact" />
-          <HiddenBox>
-            <Label htmlFor="Don't fill this out, human"></Label>
-            <Input type="text" name="bot" />
-          </HiddenBox>
-          <Field>
-            <Label htmlFor="">Name</Label>
-            <Input type="text" name="name" placeholder="Your Name" />
-          </Field>
-          <Field>
-            <Label htmlFor="">Email</Label>
-            <Input type="email" name="email" placeholder="Your Email" />
-          </Field>
-          <Field>
-            <Label htmlFor="">Subject</Label>
-            <Input type="text" name="subject" placeholder="Your Subject" />
-          </Field>
-          <Field>
-            <Label htmlFor="">Message</Label>
-            <TextArea name="message" placeholder="Your Message" />
-          </Field>
-
-          <ButtonBox>
-            <Button type="submit">Send Message</Button>
-          </ButtonBox>
-        </div>
+        <Input type="hidden" name="form-name" value="contact" />
+        <HiddenBox>
+          <Label htmlFor="Don't fill this out, human"></Label>
+          <Input type="text" name="bot" />
+        </HiddenBox>
+        <Field>
+          <Label htmlFor="">Name</Label>
+          <Input type="text" name="name" placeholder="Your Name" />
+        </Field>
+        <Field>
+          <Label htmlFor="">Email</Label>
+          <Input type="email" name="email" placeholder="Your Email" />
+        </Field>
+        <Field>
+          <Label htmlFor="">Subject</Label>
+          <Input type="text" name="subject" placeholder="Your Subject" />
+        </Field>
+        <Field>
+          <Label htmlFor="">Message</Label>
+          <TextArea name="message" placeholder="Your Message" />
+        </Field>
+        <ButtonBox>
+          <Button type="submit">Send Message</Button>
+        </ButtonBox>
       </Form>
     </Wrapper>
   </Layout>

@@ -20,7 +20,7 @@ const GalleryGrid = ({ data: { gallery } }) => {
     <>
       {gallery.map(({ fluid }, index) => (
         <StyledImgWrapper onClick={() => openModal(index)} key={index}>
-          <StyledImg fluid={fluid} />
+          <StyledImg fluid={fluid} alt={fluid.title} />
         </StyledImgWrapper>
       ))}
 

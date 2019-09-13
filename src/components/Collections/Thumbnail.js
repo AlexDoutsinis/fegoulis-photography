@@ -10,7 +10,7 @@ const Thumbnail = ({ title, fluid }) => (
   <StyledImgThumbWrapper>
     <StyledThumbBackdrop />
     <span>{title}</span>
-    <Img fluid={fluid} />
+    <Img fluid={fluid} alt={fluid.title} />
   </StyledImgThumbWrapper>
 )
 

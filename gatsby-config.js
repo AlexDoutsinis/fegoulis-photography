@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Fegoulis",
-    author: "Alexdut",
+    title: "Fegoulis Photography",
+    description: "Explore wonderfully photos taken by Kostas Fegoulis",
+    keywords: "photography, photos, images, pictures, gallery, kostas fegoulis",
+    image: "/static/logo.jpg",
+    siteUrl: "https://www.gatsbyjs.org/",
   },
   plugins: [
     {
@@ -15,5 +18,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }
