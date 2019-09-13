@@ -26,7 +26,7 @@ const H2 = styled.h2`
   `}
 `
 
-const Thanks = () => (
+const ThanksPage = () => (
   <Layout>
     <Wrapper>
       <H2>Thanks for your message, I will be in contact soon.</H2>
@@ -34,4 +34,4 @@ const Thanks = () => (
   </Layout>
 )
 
-export default Thanks
+export default ThanksPage
