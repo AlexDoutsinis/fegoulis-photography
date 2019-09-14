@@ -96,6 +96,11 @@ export const StyledInfoBox = styled.div`
   ${media.greaterThan("huge")`
     margin-bottom: 3.5rem;
   `}
+
+  ${media.lessThan("small")`
+    min-height: 20vh;
+      margin-bottom: 1rem;
+  `}
 `
 
 export const StyledTitle = styled.h2`
@@ -132,6 +137,7 @@ export const StyledParagraph = styled.p`
 
   ${media.lessThan("small")`
     font-size: .9rem;
+    letter-spacing: 0.8px;
   `}
 `
 
