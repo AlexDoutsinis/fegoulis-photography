@@ -31,5 +31,6 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
